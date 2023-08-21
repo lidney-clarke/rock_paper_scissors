@@ -12,7 +12,7 @@ again=True
 computer_win=0
 player_win=0
 
-# user experience
+# splash screen
 print('*------------------------------------*')
 print('*-----ROCK,--------------------------*')
 print('*----------PAPER,--------------------*')
@@ -59,12 +59,12 @@ while(again==True):
         print("*   Computer cogitating <  .  >      *", end = '\r')
         time.sleep(0.12)
         print("*   Computer cogitating < .   >      *", end = '\r')
-
+    # end for loop
     print("*   Computer cogitating <  !  >     *", end = '\r')
     time.sleep(0.25)
     print("*                                       *")
+    
     # prompt player for play
-
     player_choice= input("* Player choice? (Q to Quit):")
        
     #user experience
@@ -101,7 +101,9 @@ while(again==True):
         again=False 
     else: 
         print("* >Invalid choice                      *")
-
+    # end of if statement
+# end of main game loop
+    
     # user experience
     print('*                                       *')
     time.sleep(2)
@@ -116,5 +118,4 @@ while(again==True):
             print('!!! Computer Wins  !!!')
         else :
             print('    Player Wins      ')
-            
-
+    # end of if statement        
