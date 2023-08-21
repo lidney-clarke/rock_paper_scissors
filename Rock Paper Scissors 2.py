@@ -1,9 +1,9 @@
-#explore random
+#Simple game of Rock / Paper Scissors
+# explores basics of early Python
 
 # import module with random number code
 import random
 import time
-
 
 # initialize game clock
 again=True
@@ -32,9 +32,8 @@ choice = ['Rock','Paper','Scissors']
 # start main game loop
 while(again==True): 
 
-    # pick number 
+    # pick random number 
     pick=random.randint(0,2)
-    
     
     # user experience
     print("* Score - Computer:"+str(computer_win)+" Player:"+str(player_win))
@@ -67,8 +66,7 @@ while(again==True):
     # prompt player for play
 
     player_choice= input("* Player choice? (Q to Quit):")
-    
-    
+       
     #user experience
     player_choice=player_choice.title()  #so user does not have to match case
 
@@ -82,7 +80,6 @@ while(again==True):
         if computer_choice==player_choice:
             print("* >TIE")
             #next line is an error !  computer should not get points in tie
-            computer_win=computer_win+1
         #computer chose rock
         elif computer_choice=="Rock" and player_choice=="Scissors":
             print("* >Computer Wins ~"+computer_choice+' beats '+player_choice+'.')
@@ -112,8 +109,7 @@ while(again==True):
     # user experience
     print('*---------------------------------------*')
 
-
-
+    # game finished
     if max(computer_win,player_win)>4:
         again=False 
         if computer_win>player_win:
@@ -122,5 +118,3 @@ while(again==True):
             print('    Player Wins      ')
             
 
-    
-    
